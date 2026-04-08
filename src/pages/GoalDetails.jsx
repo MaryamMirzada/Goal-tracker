@@ -1,5 +1,9 @@
-function GoalDetails() {
-  return <h1>GoalDetail Page</h1>
+import React from 'react'
+
+const Goaldetails = () => {
+  return (
+    <div>Goaldetails</div>
+  )
 }
 
-export default GoalDetails;
+export default Goaldetails

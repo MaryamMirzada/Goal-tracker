@@ -1,17 +1,26 @@
-
-import AppRouter from "./router/AppRouter"
-
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
+import Goals from "./pages/Goals";
+import NewGoal from "./pages/NewGoal";
+import GoalDetails from "./pages/GoalDetails";
+import Categories from "./pages/Categories";
+import Settings from "./pages/Settings";
+import NotFound from "./pages/NotFound";
 
 function App() {
-
-
   return (
-    <>
-  <AppRouter/>
-   
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/goals" element={<Goals />} />
+        <Route path="/goals/new" element={<NewGoal />} />
+        <Route path="/goals/:id" element={<GoalDetails />} />
+        <Route path="/categories" element={<Categories />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
